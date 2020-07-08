@@ -17,7 +17,10 @@
 
         <form action="script.php" method="POST">
         <?php
-            $mensagemDeErro = isset($_SESSION["mensagem-de-erro"]) ? $_SESSION["mensagem-de-erro"];
+            $mensagemDeErro = isset($_SESSION["mensagem-de-erro"]) ? $_SESSION["mensagem-de-erro"] : '';
+            if (!empty($mensagemDeErro)) {
+                echo $mensagemDeErro;
+            }
         ?>
             <p>Your name: <input type="text" name="nome"></p>
             <p>Your age: <input type="text" name="idade"></p>
