@@ -21,6 +21,11 @@
             if (!empty($mensagemDeErro)) {
                 echo $mensagemDeErro;
             }
+
+            $mensagemDeSucesso = isset($_SESSION["mensagem-de-sucesso"]) ? $_SESSION["mensagem-de-sucesso"] : '';
+            if (!empty($mensagemDeSucesso)) {
+                echo $mensagemDeSucesso;
+            }
         ?>
             <p>Your name: <input type="text" name="nome"></p>
             <p>Your age: <input type="text" name="idade"></p>
