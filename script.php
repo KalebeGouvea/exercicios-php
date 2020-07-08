@@ -14,21 +14,25 @@ $idade = $_POST["idade"];
 if (empty($nome)) {
     $_SESSION["mensagem-de-erro"] = "O nome não pode ser vazio";
     header ('Location: index.php');
+    return;
 }
 
 if (strlen($nome) < 3) {
     $_SESSION["mensagem-de-erro"] = "O nome não pode ser inferior a 3 caracteres";
     header ('Location: index.php');
+    return;
 }
 
 if (strlen($nome) > 40) {
     $_SESSION["mensagem-de-erro"] = "O nome não pode ser superior a 40 caracteres";
     header ('Location: index.php');
+    return;
 }
 
 if (!is_numeric($idade)) {
     $_SESSION["mensagem-de-erro"] = "A idade deve conter apenas números";
     header ('Location: index.php');
+    return;
 }
 
 if ($idade >= 6 && $idade <= 12) {
