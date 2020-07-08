@@ -24,6 +24,11 @@ if (strlen($nome) > 40) {
     return;
 }
 
+if (!is_numeric($idade)) {
+    echo "A idade deve conter apenas números";
+    return;
+}
+
 if ($idade >= 6 && $idade <= 12) {
     for ($i = 0; $i < count($categorias); $i++){
         if ($categorias[$i] == 'infantil'){
