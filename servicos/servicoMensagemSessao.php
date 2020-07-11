@@ -26,11 +26,11 @@ function obterMensagemSucesso () : ?string {
 
 function removerMensagemSucesso () : void {
     if(isset($_SESSION['mensagem-de-sucesso']))
-        unset $_SESSION['mensagem-de-sucesso'];
+        unset ($_SESSION['mensagem-de-sucesso']);
 }
 
 
 function removerMensagemErro () : void {
     if(isset($_SESSION['mensagem-de-erro']))
-        unset $_SESSION['mensagem-de-erro'];
+        unset ($_SESSION['mensagem-de-erro']);
 }

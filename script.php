@@ -8,4 +8,4 @@ $nome = $_POST["nome"];
 $idade = $_POST["idade"];
 
 definirCategoriaCompetidor ($nome, $idade);
-header("location: index.php")
+header("location: index.php");
