@@ -7,7 +7,7 @@ class venda
     private $quantidade;
     private $valorTotal;
 
-    public function __constructor ($data, $produto, $quantidade, $valorTotal) 
+    public function __construct ($data, $produto, $quantidade, $valorTotal) 
     {
         $this->data = $data;
         $this->produto = $produto;
@@ -15,9 +15,9 @@ class venda
         $this->valorTotal = $valorTotal;
     }
 
-    public function exibirDadosVenda ($data, $produto, $quantidade, $valorTotal) 
+    public function exibirDadosVenda () 
     {
-        return 'Foram adquiridos ' .$this->quantidade. ' quantidades do produto ' .$this->produto. ' em ' .$this->data. '. O valor total foi de R$ ' .$this->valorTotal.; 
+        return 'Foram adquiridos ' .$this->quantidade. ' quantidades do produto ' .$this->produto. ' em ' .$this->data. '. O valor total foi de R$ ' .$this->valorTotal; 
     }
 }
 
